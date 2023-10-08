@@ -1,0 +1,30 @@
+body {
+  background-color: #fff7aa; /* Light yellow background color */
+  color: #333; /* Dark text color */
+  font-family: Arial, sans-serif; /* Choose an appropriate font-family */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.librika-embed {
+  background-color: #ffe057; /* Slightly darker yellow for embeds */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px; /* Rounded corners for the embeds */
+}
+
+.librika-embed h2 {
+  color: #333; /* Dark text for embed headings */
+}
+
+/* Add any other styles you need for your embeds */
+
+h1 {
+  font-size: 2em; /* Adjust the heading font size */
+}
+
+/* Add more custom styles for your page as needed */
