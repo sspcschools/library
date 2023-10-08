@@ -6,36 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css"> <!-- Replace with the path to your CSS file -->
   <title>Login Page</title>
-  <script src="https://code.hanko.io/hanko-ux-js/v1/hanko-ux.js"></script>
 </head>
 
 <body>
   <div style="text-align: center; padding: 100px;">
     <h1>Welcome to Our Library</h1>
-    <p>Please click the button below to log in:</p>
-    <button id="login-button">Login with SSPC</button>
+    <p>Please enter your username to proceed:</p>
+    <form action="library.html" method="get">
+      <input type="text" placeholder="Username" name="username" required>
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
   </div>
-
-  <script>
-    const loginButton = document.getElementById('login-button');
-
-    // Initialize SSPC UX SDK
-    const sspcUX = new HankoUX({
-      apiKey: 'YOUR_API_KEY',  // Replace with your SSPC API key
-      baseUrl: 'https://0a465d3b-1dfc-49f3-9b2e-e4027edfbaac.hanko.io',  // Replace with your SSPC API base URL
-    });
-
-    loginButton.addEventListener('click', async () => {
-      try {
-        const { assertion } = await sspcUX.getSingleAssertion();
-        // Send the assertion to your server for verification
-        // Example: fetch('/verify-assertion', { method: 'POST', body: JSON.stringify({ assertion }) });
-        console.log('Assertion:', assertion);
-      } catch (error) {
-        console.error('SSPC authentication failed:', error);
-      }
-    });
-  </script>
 </body>
 
 </html>
