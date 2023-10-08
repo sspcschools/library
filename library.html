@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css"> <!-- Assuming style.css is in the same directory -->
-  <title>Sunshine State Public Schools Library</title
+  <title>Sunshine State Public Schools Library</title>
   <script>
     // Function to get URL parameters
     function getUrlParameter(name) {
@@ -18,13 +18,16 @@
     // Function to set the h1 using the username parameter
     function setH1FromUsername() {
       var username = getUrlParameter('username');
+      console.log('Username:', username);  // Debug statement
       if (username) {
+        console.log('Setting H1');
         document.getElementById('welcome-text').innerText = username + "'s Library";
       }
     }
 
     // Call the function on page load
     window.onload = function() {
+      console.log('Page loaded');  // Debug statement
       setH1FromUsername();
     };
   </script>
