@@ -6,17 +6,15 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <script src="https://unpkg.com/netlify-identity-widget/dist/netlify-identity.js"></script>
   <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.open();  // Auto-open Netlify Identity login modal
-        window.netlifyIdentity.on('login', () => {
-          // Redirect to the "/library" page after successful login
-          document.location.href = '/library';
-        });
-      }
-    });
+    // Function to redirect to the Netlify Identity login page
+    function autoLogin() {
+      // Redirect to the Netlify Identity login page
+      document.location.href = 'https://library.sspcschools.com/.netlify/identity';
+    }
+
+    // Auto-login when the page loads
+    window.addEventListener('DOMContentLoaded', autoLogin);
   </script>
 </body>
 </html>
