@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css"> <!-- Replace with the path to your CSS file -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
-  <div style="text-align: center; padding: 100px;">
-    <h1>Welcome to Our Library</h1>
-    <p>Please enter your username to proceed:</p>
-    <form action="library.html" method="get">
-      <input type="text" placeholder="Username" name="username" required>
-      <br><br>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
+  <script src="https://unpkg.com/netlify-identity-widget/dist/netlify-identity.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.open();  // Auto-open Netlify Identity login modal
+        window.netlifyIdentity.on('login', () => {
+          // Redirect to the "/library" page after successful login
+          document.location.href = '/library';
+        });
+      }
+    });
+  </script>
 </body>
-
 </html>
