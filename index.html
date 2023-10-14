@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login Page</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <script>
-    // Function to redirect to the Netlify Identity login page
-    function autoLogin() {
-      // Redirect to the Netlify Identity login page
-      document.location.href = 'https://library.sspcschools.com/.netlify/identity';
-    }
+!DOCTYPE html>
+<html lang="en">
 
-    // Auto-login when the page loads
-    window.addEventListener('DOMContentLoaded', autoLogin);
-  </script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+</head>
+
+<body>
+  <div style="text-align: center; padding: 100px;">
+    <h1>Welcome to Our Library</h1>
+    <p>Please enter your username to proceed:</p>
+    <form action="library.html" method="get">
+      <input type="text" placeholder="Username" name="username" required>
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
 </body>
+
 </html>
